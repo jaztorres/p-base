@@ -43,3 +43,112 @@
 .altoMinimo{
   min-height: 600px;
 }
+
+
+
+//Modal Bases
+
+        .text-body {
+            font-family: 'Roboto', sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: auto;
+            background: #fff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            color: #d32f2f; /* Un rojo más oscuro para el título principal */
+            text-align: center;
+            margin-bottom: 20px;
+            font-size: 2.5em;
+            text-transform: uppercase;
+        }
+
+        h2 {
+            color: #c62828; /* Un rojo similar para las secciones */
+            border-bottom: 2px solid #eee;
+            padding-bottom: 10px;
+            margin-top: 30px;
+            font-size: 1.8em;
+        }
+
+        h3 {
+            color: #e53935; /* Un rojo un poco más claro para subtítulos */
+            margin-top: 20px;
+            font-size: 1.4em;
+        }
+
+        p {
+            margin-bottom: 15px;
+            text-align: justify;
+        }
+
+        ul {
+            list-style: disc;
+            margin-left: 25px;
+            margin-bottom: 15px;
+        }
+
+        ol {
+            list-style: decimal;
+            margin-left: 25px;
+            margin-bottom: 15px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+            font-size: 0.9em;
+        }
+
+        th, td {
+            border: 1px solid #ddd;
+            padding: 10px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #f2f2f2;
+            color: #555;
+            font-weight: bold;
+        }
+
+        td:first-child {
+            font-weight: bold;
+        }
+
+        .highlight {
+            background-color: #fff3e0; /* Un color suave para resaltar */
+            padding: 10px;
+            border-left: 5px solid #ff9800;
+            margin-bottom: 20px;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid #eee;
+            color: #777;
+            font-size: 0.9em;
+        }
+
+        /* Estilos específicos para el título de la dinámica */
+        .promo-title {
+            font-size: 2.2em;
+            font-weight: bold;
+            color: #c62828;
+            text-align: center;
+            margin-bottom: 30px;
+        }
