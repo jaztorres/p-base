@@ -1,4 +1,12 @@
 /* You can add global styles to this file, and also import other style files */
+/*nav*/
+.nav-text{ 
+  color:#20ae61;
+
+
+}
+
+
 /* Carousel base class */
 .carousel {
   margin-bottom: 4rem;
@@ -51,7 +59,7 @@ height: 70px;
 
 //Modal Bases
 
-        .text-body {
+        .text-body-modal {
             font-family: 'Roboto', sans-serif;
             line-height: 1.6;
             margin: 0;
@@ -60,7 +68,7 @@ height: 70px;
             color: #333;
         }
 
-        .container {
+        .container-modal {
             max-width: 900px;
             margin: auto;
             background: #fff;
@@ -69,7 +77,7 @@ height: 70px;
             box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
         }
 
-        h1 {
+        .title1-modal {
             color: #d32f2f; /* Un rojo más oscuro para el título principal */
             text-align: center;
             margin-bottom: 20px;
@@ -77,7 +85,7 @@ height: 70px;
             text-transform: uppercase;
         }
 
-        h2 {
+        .title2-modal {
             color: #c62828; /* Un rojo similar para las secciones */
             border-bottom: 2px solid #eee;
             padding-bottom: 10px;
@@ -85,7 +93,7 @@ height: 70px;
             font-size: 1.8em;
         }
 
-        h3 {
+        .title3-modal {
             color: #e53935; /* Un rojo un poco más claro para subtítulos */
             margin-top: 20px;
             font-size: 1.4em;
