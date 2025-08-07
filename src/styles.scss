@@ -167,3 +167,63 @@ height: 70px;
             text-align: center;
             margin-bottom: 30px;
         }
+
+        /*Cuenta*/
+        .form-container {
+  background-color: #f4c430;
+  padding: 20px;
+  border: 2px solid #00a651;
+  border-radius: 10px;
+  text-align: center;
+  font-family: Arial, sans-serif;
+}
+
+h2 {
+  color: #fff;
+  margin-bottom: 20px;
+}
+
+.login-link {
+  color: #ff0000;
+  float: right;
+  text-decoration: none;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+input, select {
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  width: 100%;
+  max-width: 300px;
+  margin: 0 auto;
+}
+
+.terms {
+  margin: 20px 0;
+  color: #fff;
+}
+
+.terms input {
+  margin-right: 10px;
+}
+
+.register-btn {
+  background-color: #ff0000;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 100%;
+  max-width: 200px;
+}
+
+.register-btn:hover {
+  background-color: #cc0000;
+}

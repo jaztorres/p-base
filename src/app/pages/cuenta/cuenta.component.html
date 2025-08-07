@@ -31,3 +31,29 @@
     </div>
   </div>
 </div>
+
+<div class="form-container">
+  <h2 *ngIf="!isLogin">Crear una cuenta</h2>
+  <h2 *ngIf="isLogin">Iniciar sesión</h2>
+  <a *ngIf="isLogin" href="#" class="login-link">Iniciar sesión</a>
+  <form>
+    <div class="form-group">
+      <input type="text" [(ngModel)]="model.fullName" placeholder="Nombre completo" *ngIf="!isLogin" />
+      <input type="email" [(ngModel)]="model.email" placeholder="Correo electrónico" />
+      <input type="password" [(ngModel)]="model.password" placeholder="Contraseña" />
+      <input type="text" [(ngModel)]="model.address" placeholder="Dirección completa" *ngIf="!isLogin" />
+      <select [(ngModel)]="model.state" placeholder="Estado" *ngIf="!isLogin">
+        <option value="" disabled selected>Selecciona una opción</option>
+        <option value="option1">Option 1</option>
+        <option value="option2">Option 2</option>
+        <option value="option2">Option 2</option>
+      </select>
+      <input type="tel" [(ngModel)]="model.phone" placeholder="Teléfono/Celular" *ngIf="!isLogin" />
+    </div>
+    <div class="terms" *ngIf="!isLogin">
+      <input type="checkbox" [(ngModel)]="model.acceptTerms" />
+      <label>Acepto Bases y Aviso de esta promoción.</label>
+    </div>
+    <button type="submit" class="register-btn">Registrar</button>
+  </form>
+</div>
