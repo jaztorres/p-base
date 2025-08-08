@@ -4,7 +4,7 @@
 
 body { 
 
-  font-family: 'Amino Regular 9', sans-serif;
+  font-family: 'Amino Regular 9',  sans-serif;
 }
 
 
@@ -12,10 +12,10 @@ body {
 /*fonts*/
 @font-face {
     font-family: 'Amino Regular 9';
-    src: url('/public/assets/fonts/amino/amino_black-webfont.woff2') format('woff2');
-    src: url('/public/assets/fonts/amino/amino_black-webfont.woff') format('woff');
-    font-weight: bolder;
-    font-style: bolder;
+    src: url('/assets/fonts/amino/amino_black-webfont.woff2') format('woff2');
+    src: url('/assets/fonts/amino/amino_black-webfont.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
 }
 
 
@@ -88,7 +88,7 @@ height: 70px;
 //Modal Bases
 
         .text-body-modal {
-            font-family: 'animo-regular', sans-serif;
+            font-family: 'Amino Regular 9', sans-serif;
             line-height: 1.6;
             margin: 0;
             padding: 20px;
@@ -106,6 +106,7 @@ height: 70px;
         }
 
         .title1-modal {
+          font-family: 'Amino Regular 9', sans-serif;
             color: #d32f2f; /* Un rojo más oscuro para el título principal */
             text-align: center;
             margin-bottom: 20px;
@@ -122,6 +123,7 @@ height: 70px;
         }
 
         .title3-modal {
+          font-family: 'Amino Regular 9', sans-serif;
             color: #e53935; /* Un rojo un poco más claro para subtítulos */
             margin-top: 20px;
             font-size: 1.4em;
@@ -168,6 +170,7 @@ height: 70px;
         }
 
         .highlight {
+          font-family: 'Amino Regular 9', sans-serif;
             background-color: #fff3e0; /* Un color suave para resaltar */
             padding: 10px;
             border-left: 5px solid #ff9800;
@@ -175,6 +178,7 @@ height: 70px;
         }
 
         footer {
+          font-family: 'Amino Regular 9', sans-serif;
             text-align: center;
             margin-top: 40px;
             padding-top: 20px;
@@ -185,7 +189,7 @@ height: 70px;
 
         /* Estilos específicos para el título de la dinámica */
         .promo-title {
-           font-family: 'animo-regular', sans-serif;
+           font-family: 'Amino Regular 9', sans-serif;
 
             font-size: 2.2em;
             font-weight: bold;
@@ -201,10 +205,11 @@ height: 70px;
   border: 2px solid #00a651;
   border-radius: 10px;
   text-align: center;
-  font-family: Arial, sans-serif;
+  font-family: 'Amino Regular 9', sans-serif;
 }
 
 h2 {
+  font-family: 'Amino Regular 9', sans-serif;
   color: #fff;
   margin-bottom: 20px;
 }
@@ -240,6 +245,7 @@ input, select {
 }
 
 .register-btn {
+  font-family: 'Amino Regular 9', sans-serif;
   background-color: #ff0000;
   color: #fff;
   padding: 10px 20px;
@@ -251,5 +257,6 @@ input, select {
 }
 
 .register-btn:hover {
+  font-family: 'Amino Regular 9', sans-serif;
   background-color: #cc0000;
 }
