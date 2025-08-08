@@ -1,49 +1,23 @@
 /* You can add global styles to this file, and also import other style files */
-
-
 /* src/styles.scss */
-/*fonts*/
-@font-face {
-  font-family: 'amino-black';
-src: url('/public/assets/fonts/amino/amino_alt_bold-webfont.woff2') format('woff2'),
-         url('/public/assets/fonts/amino/amino_alt_bold-webfont.woff') format('woff');
-  font-weight: bold;
-  font-style: normal;
-  font-display: swap; /* Esto es muy importante para el rendimiento */
-}
-
-
-@font-face {
-  font-family: 'amino-altbold';
- src: url('/public/assets/fonts/amino/amino_alt_bold-webfont.woff2') format('woff2'),
-         url('/public/assets/fonts/amino/amino_alt_bold-webfont.woff') format('woff');
-  font-weight: bold;
-  font-style: normal;
-  font-display: swap; /* Esto es muy importante para el rendimiento */
-}
-
-@font-face {
-  font-family: 'animo-medium';
-  src: url('/public/assets/fonts/amino/amino_medium-webfont.woff2') format('woff2'),
-       url('/public/assets/fonts/amino/amino_medium-webfont.woff') format('woff');
-  font-weight: 500;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'animo-regular';
-  src: url('/public/assets/fonts/amino/amino_bold-webfont.woff2') format('woff2'),
-       url('/public/assets/fonts/amino/amino_medium-webfont.woff') format('woff');
-  font-weight: 600;
-  font-style: normal;
-  font-display: swap;
-}
 
 
 body { 
-  font-family: 'amino-altbold', sans-serif;
+
+  font-family: 'Amino Regular 9', sans-serif;
 }
+
+
+
+/*fonts*/
+@font-face {
+    font-family: 'Amino Regular 9';
+    src: url('/public/assets/fonts/amino/amino_black-webfont.woff2') format('woff2');
+    src: url('/public/assets/fonts/amino/amino_black-webfont.woff') format('woff');
+    font-weight: bolder;
+    font-style: bolder;
+}
+
 
 
 
@@ -114,7 +88,7 @@ height: 70px;
 //Modal Bases
 
         .text-body-modal {
-            font-family: 'Roboto', sans-serif;
+            font-family: 'animo-regular', sans-serif;
             line-height: 1.6;
             margin: 0;
             padding: 20px;
@@ -211,6 +185,8 @@ height: 70px;
 
         /* Estilos específicos para el título de la dinámica */
         .promo-title {
+           font-family: 'animo-regular', sans-serif;
+
             font-size: 2.2em;
             font-weight: bold;
             color: #c62828;
