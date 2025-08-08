@@ -3,16 +3,17 @@ import { HeaderComponent } from '../../shared/header/header.component';
 import { FormsModule} from '@angular/forms'
 import { CommonModule } from '@angular/common';
 
+
 @Component({
   selector: 'app-cuenta',
   standalone: true,
-  imports: [HeaderComponent,CommonModule, FormsModule],
+  imports: [HeaderComponent,CommonModule, FormsModule,],
   templateUrl: './cuenta.component.html',
   styles: ``
 })
 export class CuentaComponent {
 
-@Input() isLogin: boolean = false;
+  @Input() backgroundImage: string = 'assets/background.jpg'; // Default background image
   model = {
     fullName: '',
     email: '',
@@ -20,6 +21,14 @@ export class CuentaComponent {
     address: '',
     state: '',
     phone: '',
-    acceptTerms: false
+    acceptedTerms: false
   };
+
+  onSubmit() {
+    console.log('Form submitted:', this.model);
+    // Add form submission logic here
+  }
 }
+
+
+
