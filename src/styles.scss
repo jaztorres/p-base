@@ -37,6 +37,9 @@ body {
 }
 
 
+
+
+
 .container {
   width:100% ;
   max-width: 1200px;
@@ -79,10 +82,36 @@ body {
     text-decoration: underline;
 }
 
+/*hero-section*/
+.yellow-line {
+  height: 7px;
+  background-color: #ffd308;
+  width:100%;
+}
 
+.hero-section{
+position:relative;
+height:100vh;
+background-image: url ('/assets/bg/bg-1.png');
+background-size: cover;
+background-position: center;
+background-repeat: no-repeat;
+display:flex;
+align-items: center ;
+padding: 20px;
+}
 
+/* Footer*/
 
-
+.footer-back{
+  background-color: #0fa54f;
+}
+.legal { 
+text-align: center;
+ font-family: 'Amino Regular 9 black';
+ color:#ddd;
+ padding: 20px;
+}
 
 
 /* Carousel base class */
