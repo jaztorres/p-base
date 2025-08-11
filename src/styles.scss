@@ -4,30 +4,80 @@
 
 body { 
 
-  font-family: 'Amino Regular 9',  sans-serif;
+  font-family: 'Amino Regular 9 black',  sans-serif;
+  color:#333;
+  margin: 0;
+  padding: 0;
+  background-color: #fff;
 }
 
 
 
 /*fonts*/
 @font-face {
-    font-family: 'Amino Regular 9';
-    src: url('/assets/fonts/amino/amino_black-webfont.woff2') format('woff2');
-    src: url('/assets/fonts/amino/amino_black-webfont.woff') format('woff');
+    font-family: 'Amino Medium';
+    src: url('/assets/fonts/amino/amino_medium-webfont.ttf') format('ttf');
     font-weight: 500;
     font-style: normal;
 }
 
+@font-face {
+    font-family: 'Amino Bold';
+    src: url('/assets/fonts/amino/amino_bold-webfont.ttf') format('ttf');
+    font-weight: 100;
+    font-style: normal;
+}
 
-
-
-
-/*nav*/
-.nav-text{ 
-  color:#20ae61;
+@font-face {
+    font-family: 'Amino Regular 9 black';
+    src: url('/assets/fonts/amino/amino_black-webfont.woff2') format('woff2');
+    src: url('/assets/fonts/amino/amino_black-webfont.woff') format('woff');
+    font-weight: 200;
+    font-style: normal;
 }
 
 
+.container {
+  width:100% ;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+
+
+
+/*nav- header*/
+.nav-text{ 
+  color:#20ae61;
+   transform: UPP;
+}
+
+.menu {
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #fff;
+}
+
+/* Enlaces del menú */
+.menu-nav a {
+    text-decoration: none;
+    color: #39bc76; /* Verde para los enlaces */
+    margin: 0 15px;
+    font-size: 16px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.menu-nav a:last-child {
+    color: #ff0000; /* Rojo para "MI CUENTA" */
+    text-transform: uppercase;
+}
+
+/* Hover (opcional) */
+.menu-nav a:hover {
+    text-decoration: underline;
+}
 
 
 
