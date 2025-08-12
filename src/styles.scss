@@ -36,7 +36,14 @@ body {
     font-style: normal;
 }
 
-
+h1 {
+  color:#00a651;
+  font-weight: 500;
+font-size: 30px;
+font-weight: normal;
+padding: 10px;
+text-align: center;
+}
 
 
 
@@ -143,6 +150,50 @@ padding: 20px;
   width: 50px;
   height:50px;
 }
+
+/* MECANICA*/
+
+.mechanics-section {
+  background-image: url(/assets/bg/bg-2.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 60px 0;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+}
+
+/* Efecto fade para las imágenes */
+.fade-in {
+  opacity: 0;
+  animation: fadeIn 1s ease-in forwards ;
+}
+
+@keyframes fadeIn {
+  0% { opacity: 0; transform: translateY(20px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+/* Ajustes responsivos */
+@media (max-width: 768px) {
+  .mechanics-section {
+    padding: 40px 0;
+    background-position: top;
+  }
+
+  .fade-in {
+    animation-delay: 0.2s;
+  }
+}
+
+h2 {
+  font-weight: bold;
+  color: #fff;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+
 
 /* Footer*/
 
