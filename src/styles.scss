@@ -2,10 +2,10 @@
 /* src/styles.scss */
 
 
-body { 
+body {
 
-  font-family: 'Amino Regular 9 black',  sans-serif;
-  color:#333;
+  font-family: 'Amino Regular 9 black', sans-serif;
+  color: #333;
   margin: 0;
   padding: 0;
   background-color: #fff;
@@ -15,40 +15,50 @@ body {
 
 /*fonts*/
 @font-face {
-    font-family: 'Amino Medium';
-    src: url('/assets/fonts/amino/amino_medium-webfont.ttf') format('ttf');
-    font-weight: 500;
-    font-style: normal;
+  font-family: 'Amino Medium';
+  src: url('/assets/fonts/amino/amino_medium-webfont.ttf') format('ttf');
+  font-weight: 500;
+  font-style: normal;
 }
 
 @font-face {
-    font-family: 'Amino Bold';
-    src: url('/assets/fonts/amino/amino_bold-webfont.ttf') format('ttf');
-    font-weight: 100;
-    font-style: normal;
+  font-family: 'Amino Bold';
+  src: url('/assets/fonts/amino/amino_bold-webfont.ttf') format('ttf');
+  font-weight: 100;
+  font-style: normal;
 }
 
 @font-face {
-    font-family: 'Amino Regular 9 black';
-    src: url('/assets/fonts/amino/amino_black-webfont.woff2') format('woff2');
-    src: url('/assets/fonts/amino/amino_black-webfont.woff') format('woff');
-    font-weight: 200;
-    font-style: normal;
+  font-family: 'Amino Regular 9 black';
+  src: url('/assets/fonts/amino/amino_black-webfont.woff2') format('woff2');
+  src: url('/assets/fonts/amino/amino_black-webfont.woff') format('woff');
+  font-weight: 200;
+  font-style: normal;
 }
+
 
 h1 {
-  color:#00a651;
+  color: #00a651;
   font-weight: 500;
-font-size: 30px;
-font-weight: normal;
-padding: 10px;
-text-align: center;
+  font-size: 30px;
+  font-weight: normal;
+  padding: 10px;
+  text-align: center;
 }
 
+h2 {
+  color: #ed1c24;
+  font-weight: 500;
+  font-size: 30px;
+  font-weight: normal;
+  padding: 10px;
+  text-align: center;
+  
+}
 
 
 .container {
-  width:100% ;
+  width: 100%;
   max-width: 1200px;
   margin: 0 auto;
 }
@@ -57,59 +67,61 @@ text-align: center;
 
 
 /*nav- header*/
-.nav-text{ 
-  color:#20ae61;
-   transform: UPP;
+.nav-text {
+  color: #20ae61;
+  transform: UPP;
 }
 
 .menu {
-    display: flex;
-    align-items: center;
-    padding: 10px 20px;
-    background-color: #fff;
+  display: flex;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #fff;
 }
 
 /* Enlaces del menú */
 .menu-nav a {
-    text-decoration: none;
-    color: #39bc76; /* Verde para los enlaces */
-    margin: 0 15px;
-    font-size: 16px;
-    font-weight: bold;
-    text-transform: uppercase;
+  text-decoration: none;
+  color: #39bc76;
+  /* Verde para los enlaces */
+  margin: 0 15px;
+  font-size: 16px;
+  font-weight: bold;
+  text-transform: uppercase;
 }
 
 .menu-nav a:last-child {
-    color: #ff0000; /* Rojo para "MI CUENTA" */
-    text-transform: uppercase;
+  color: #ff0000;
+  /* Rojo para "MI CUENTA" */
+  text-transform: uppercase;
 }
 
 /* Hover (opcional) */
 .menu-nav a:hover {
-    text-decoration: underline;
+  text-decoration: underline;
 }
 
 /*hero-section*/
 .yellow-line {
   height: 7px;
   background-color: #ffd308;
-  width:100%;
+  width: 100%;
 }
 
-.hero-section{
-position:relative;
-height:100vh;
-background-image: url(/assets/bg/bg-tr-2000.jpg);
-background-size: cover;
-background-position: center;
-background-repeat: no-repeat;
-display:flex;
-align-items: center ;
-padding: 20px;
+.hero-section {
+  position: relative;
+  height: 100vh;
+  background-image: url(/assets/bg/bg-tr-2000.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  padding: 20px;
 }
 
 .image-container {
-  position:absolute;
+  position: absolute;
   top: 50%;
   right: 20px;
   transform: translateY(-50%);
@@ -122,33 +134,40 @@ padding: 20px;
 .glow-effect {
   animation: glow 1.5s ease-in-out infinite alternate;
 }
-@keyframes glow{
-  from{
-    filter:drop-shadow( 0 0 5px rgba (255,255,255,0.8));
+
+@keyframes glow {
+  from {
+    filter: drop-shadow(0 0 5px rgba (255, 255, 255, 0.8));
   }
+
   to {
-    filter: drop-shadow( 0 0 20px rgba (255,255,255,1));
+    filter: drop-shadow(0 0 20px rgba (255, 255, 255, 1));
   }
 }
 
-.jump-button{
-  position:absolute;
-  bottom:50px;
+.jump-button {
+  position: absolute;
+  bottom: 50px;
   left: 50%;
   transform: translateX(-50%);
   animation: jump 1s ease-in-out infinite;
 }
-@keyframes jump{
-  0%, 100%{
+
+@keyframes jump {
+
+  0%,
+  100% {
     transform: translateX(-50%) translateY(0);
   }
+
   50% {
     transform: translateX(-50) translateY(-20px);
   }
 }
+
 .jump-button svg {
   width: 50px;
-  height:50px;
+  height: 50px;
 }
 
 /* MECANICA*/
@@ -167,12 +186,19 @@ padding: 20px;
 /* Efecto fade para las imágenes */
 .fade-in {
   opacity: 0;
-  animation: fadeIn 1s ease-in forwards ;
+  animation: fadeIn 1s ease-in forwards;
 }
 
 @keyframes fadeIn {
-  0% { opacity: 0; transform: translateY(20px); }
-  100% { opacity: 1; transform: translateY(0); }
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 /* Ajustes responsivos */
@@ -187,7 +213,7 @@ padding: 20px;
   }
 }
 
-h2 {
+.h2-mec {
   font-weight: bold;
   color: #fff;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
@@ -211,7 +237,7 @@ h2 {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.3); // Overlay for better contrast
+    /*background: rgba(0, 0, 0, 0.3); // Overlay for better contrast*/
     z-index: 1;
   }
 
@@ -239,12 +265,10 @@ h2 {
       left: -50%;
       width: 20%;
       height: 200%;
-      background: linear-gradient(
-        to right,
-        rgba(255, 255, 255, 0) 0%,
-        rgba(255, 255, 255, 0.3) 50%,
-        rgba(255, 255, 255, 0) 100%
-      );
+      background: linear-gradient(to right,
+          rgba(255, 255, 255, 0) 0%,
+          rgba(255, 255, 255, 0.3) 50%,
+          rgba(255, 255, 255, 0) 100%);
       transform: rotate(45deg);
       animation: shine 3s infinite;
     }
@@ -275,6 +299,7 @@ h2 {
   0% {
     left: -50%;
   }
+
   100% {
     left: 150%;
   }
@@ -282,28 +307,65 @@ h2 {
 
 // Fade and Rotate Animation
 @keyframes fadeRotate {
-  0%, 100% {
+
+  0%,
+  100% {
     opacity: 1;
     transform: rotate(0deg);
   }
+
   50% {
     opacity: 0.7;
     transform: rotate(10deg);
   }
 }
+.img-fluid2{
+
+    max-width: 130%;
+    height: auto;
+    margin-bottom: -101px;
+}
+
+/*Winers*/
+/* Ajustes adicionales para mejorar la responsividad */
+.card {
+  transition: transform 0.3s ease-in-out;
+}
+.card:hover {
+  transform: translateY(-5px);
+}
+
+/* Asegurar que las tarjetas tengan el mismo alto en pantallas medianas y grandes */
+@media (min-width: 768px) {
+  .card {
+    min-height: 200px;
+  }
+}
 
 /* Footer*/
 
-.footer-back{
+.footer-back {
   background-color: #0fa54f;
 }
-.legal { 
-text-align: center;
- font-family: 'Amino Regular 9 black';
- color:#ddd;
- padding: 20px;
+
+.legal {
+  text-align: center;
+  font-family: 'Amino Regular 9 black';
+  color: #ddd;
+  padding: 20px;
 }
 
+.nav-link2 {
+    display: block;
+    padding: 50px;
+    font-size: var(--bs-nav-link-font-size);
+    font-weight: var(--bs-nav-link-font-weight);
+    color: #9e0404;
+    text-decoration: none;
+    background: 0 0;
+    border: 0;
+    transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out;
+}
 
 /* Carousel base class */
 .carousel {
@@ -346,130 +408,135 @@ text-align: center;
 }
 
 
-.altoMinimo{
+.altoMinimo {
   min-height: 600px;
 }
 
 .logo-img {
-width: 130px;
-height: 70px;
+  width: 130px;
+  height: 70px;
 }
 
 //Modal Bases
 
-        .text-body-modal {
-            font-family: 'Amino Regular 9', sans-serif;
-            line-height: 1.6;
-            margin: 0;
-            padding: 20px;
-            background-color: #f4f4f4;
-            color: #333;
-        }
+.text-body-modal {
+  font-family: 'Amino Regular 9', sans-serif;
+  line-height: 1.6;
+  margin: 0;
+  padding: 20px;
+  background-color: #f4f4f4;
+  color: #333;
+}
 
-        .container-modal {
-            max-width: 900px;
-            margin: auto;
-            background: #fff;
-            padding: 30px;
-            border-radius: 8px;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-        }
+.container-modal {
+  max-width: 900px;
+  margin: auto;
+  background: #fff;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
 
-        .title1-modal {
-          font-family: 'Amino Regular 9', sans-serif;
-            color: #d32f2f; /* Un rojo más oscuro para el título principal */
-            text-align: center;
-            margin-bottom: 20px;
-            font-size: 2.5em;
-            text-transform: uppercase;
-        }
+.title1-modal {
+  font-family: 'Amino Regular 9', sans-serif;
+  color: #d32f2f;
+  /* Un rojo más oscuro para el título principal */
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 2.5em;
+  text-transform: uppercase;
+}
 
-        .title2-modal {
-            color: #c62828; /* Un rojo similar para las secciones */
-            border-bottom: 2px solid #eee;
-            padding-bottom: 10px;
-            margin-top: 30px;
-            font-size: 1.8em;
-        }
+.title2-modal {
+  color: #c62828;
+  /* Un rojo similar para las secciones */
+  border-bottom: 2px solid #eee;
+  padding-bottom: 10px;
+  margin-top: 30px;
+  font-size: 1.8em;
+}
 
-        .title3-modal {
-          font-family: 'Amino Regular 9', sans-serif;
-            color: #e53935; /* Un rojo un poco más claro para subtítulos */
-            margin-top: 20px;
-            font-size: 1.4em;
-        }
+.title3-modal {
+  font-family: 'Amino Regular 9', sans-serif;
+  color: #e53935;
+  /* Un rojo un poco más claro para subtítulos */
+  margin-top: 20px;
+  font-size: 1.4em;
+}
 
-        p {
-            margin-bottom: 15px;
-            text-align: justify;
-        }
+p {
+  margin-bottom: 15px;
+  text-align: justify;
+}
 
-        ul {
-            list-style: disc;
-            margin-left: 25px;
-            margin-bottom: 15px;
-        }
+ul {
+  list-style: disc;
+  margin-left: 25px;
+  margin-bottom: 15px;
+}
 
-        ol {
-            list-style: decimal;
-            margin-left: 25px;
-            margin-bottom: 15px;
-        }
+ol {
+  list-style: decimal;
+  margin-left: 25px;
+  margin-bottom: 15px;
+}
 
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            margin-bottom: 20px;
-            font-size: 0.9em;
-        }
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+  font-size: 0.9em;
+}
 
-        th, td {
-            border: 1px solid #ddd;
-            padding: 10px;
-            text-align: left;
-        }
+th,
+td {
+  border: 1px solid #ddd;
+  padding: 10px;
+  text-align: left;
+}
 
-        th {
-            background-color: #f2f2f2;
-            color: #555;
-            font-weight: bold;
-        }
+th {
+  background-color: #f2f2f2;
+  color: #555;
+  font-weight: bold;
+}
 
-        td:first-child {
-            font-weight: bold;
-        }
+td:first-child {
+  font-weight: bold;
+}
 
-        .highlight {
-          font-family: 'Amino Regular 9', sans-serif;
-            background-color: #fff3e0; /* Un color suave para resaltar */
-            padding: 10px;
-            border-left: 5px solid #ff9800;
-            margin-bottom: 20px;
-        }
+.highlight {
+  font-family: 'Amino Regular 9', sans-serif;
+  background-color: #fff3e0;
+  /* Un color suave para resaltar */
+  padding: 10px;
+  border-left: 5px solid #ff9800;
+  margin-bottom: 20px;
+}
 
-        footer {
-          font-family: 'Amino Regular 9', sans-serif;
-            text-align: center;
-            margin-top: 40px;
-            padding-top: 20px;
-            border-top: 1px solid #eee;
-            color: #777;
-            font-size: 0.9em;
-        }
+footer {
+  font-family: 'Amino Regular 9', sans-serif;
+  text-align: center;
+  margin-top: 40px;
+  padding-top: 20px;
+  border-top: 1px solid #eee;
+  color: #777;
+  font-size: 0.9em;
+}
 
-        /* Estilos específicos para el título de la dinámica */
-        .promo-title {
-           font-family: 'Amino Regular 9', sans-serif;
+/* Estilos específicos para el título de la dinámica */
+.promo-title {
+  font-family: 'Amino Regular 9', sans-serif;
 
-            font-size: 2.2em;
-            font-weight: bold;
-            color: #c62828;
-            text-align: center;
-            margin-bottom: 30px;
-        }
+  font-size: 2.2em;
+  font-weight: bold;
+  color: #c62828;
+  text-align: center;
+  margin-bottom: 30px;
+}
 
-        /*Cuenta*/
-        .form-container {
+/*Cuenta*/
+.form-container {
   background-color: #f4c430;
   padding: 20px;
   border: 2px solid #00a651;
@@ -478,7 +545,7 @@ height: 70px;
   font-family: 'Amino Regular 9', sans-serif;
 }
 
-h2 {
+.h2-cuenta {
   font-family: 'Amino Regular 9', sans-serif;
   color: #fff;
   margin-bottom: 20px;
@@ -496,7 +563,8 @@ h2 {
   gap: 10px;
 }
 
-input, select {
+input,
+select {
   padding: 10px;
   border: none;
   border-radius: 5px;
