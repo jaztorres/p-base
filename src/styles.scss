@@ -70,9 +70,13 @@ p { font-family: 'Amino Regular', sans-serif;}
 /*nav- header*/
 .nav-text {
   color: #20ae61;
-  transform: UPP;
+  text-transform: uppercase;
 }
 
+.nav-item{
+  color: #20ae61;
+  text-transform: uppercase;
+}
 .menu {
   display: flex;
   align-items: center;
