@@ -369,7 +369,7 @@ p { font-family: 'Amino Regular', sans-serif;}
 .nav-link2 {
     /*display: block;*/
     text-align: center;
-     padding: 50px;
+    padding: 50px;
     /*font-size: var(--bs-nav-link-font-size);*/
     /*font-weight: var(--bs-nav-link-font-weight);*/
     color: #ffffff;
@@ -384,6 +384,160 @@ p { font-family: 'Amino Regular', sans-serif;}
   font-family: 'Amino Regular', sans-serif;
  
 }
+
+/*styles Modals*/
+//Modal Bases
+
+.text-body-modal {
+  font-family: 'Amino Regular', sans-serif;
+  line-height: 1.6;
+  margin: 0;
+  padding: 20px;
+  background-color: #f4f4f4;
+  color: #333;
+}
+
+.container-modal {
+  max-width: 1200px;
+  margin: auto;
+  background: #fff;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.title1-modal {
+  font-family: 'Amino Regular 9', sans-serif;
+  font-family: 'Amino Regular 9 black', sans-serif;
+  color: #d32f2f;
+  /* Un rojo más oscuro para el título principal */
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 1.5em;
+  text-transform: uppercase;
+}
+
+.title2-modal {
+  font-family: 'Amino Regular 9 black', sans-serif;
+  color: #c62828;
+  /* Un rojo similar para las secciones */
+  border-bottom: 2px solid #eee;
+  padding-bottom: 10px;
+  margin-top: 30px;
+  font-size: 1.8em;
+}
+
+.title3-modal {
+   font-family: 'Amino Regular 9 black', sans-serif;
+  color: #e53935;
+  /* Un rojo un poco más claro para subtítulos */
+  margin-top: 20px;
+  font-size: 1.4em;
+}
+
+p {
+  margin-bottom: 15px;
+  text-align: justify;
+}
+
+ul {
+  list-style: disc;
+  margin-left: 25px;
+  margin-bottom: 15px;
+}
+
+ol {
+  list-style: decimal;
+  margin-left: 25px;
+  margin-bottom: 15px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+  font-size: 0.9em;
+}
+
+th,
+td {
+  border: 1px solid #ddd;
+  padding: 10px;
+  text-align: left;
+}
+
+th {
+  background-color: #f2f2f2;
+  color: #555;
+  font-weight: bold;
+}
+
+td:first-child {
+  font-weight: bold;
+}
+
+.highlight {
+font-family: 'Amino Regular 9 black', sans-serif;
+  background-color: #fff3e0;
+  /* Un color suave para resaltar */
+  padding: 10px;
+  border-left: 5px solid #ff9800;
+  margin-bottom: 20px;
+}
+
+footer {
+  font-family: 'Amino Regular 9', sans-serif;
+  text-align: center;
+  margin-top: 40px;
+  padding-top: 20px;
+  border-top: 1px solid #eee;
+  color: #777;
+  font-size: 0.9em;
+}
+
+/* Estilos específicos para el título de la dinámica */
+.promo-title {
+  font-family: 'Amino Regular' sans-serif;
+  font-size: 1.2em;
+  font-weight: bold;
+  color: #c62828;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.promo-sub{
+   font-family: 'Amino Regular 9 black', sans-serif;
+  
+   color: #00a651;
+  font-weight: 500;
+  font-size: 25px;
+  font-weight: normal;
+  padding: 10px;
+  text-align: center;
+}
+
+.promo-title2 {
+  font-family: 'Amino Regular 9 black', sans-serif;
+  color: #ed1c24;
+    font-weight: 500;
+    font-size: 20px;
+    font-weight: normal;
+    padding: 10px;
+    text-align: left;
+}
+
+.promo-title3 {
+  font-family: 'Amino Regular' sans-serif;
+  font-size: 1.2em;
+  font-weight: bold;
+  color: #c62828;
+  text-align: left;
+  margin-bottom:0px;
+}
+
+
+
+
 
 /* Carousel base class */
 .carousel {
@@ -435,123 +589,6 @@ p { font-family: 'Amino Regular', sans-serif;}
   height: 70px;
 }
 
-//Modal Bases
-
-.text-body-modal {
-  font-family: 'Amino Regular 9', sans-serif;
-  line-height: 1.6;
-  margin: 0;
-  padding: 20px;
-  background-color: #f4f4f4;
-  color: #333;
-}
-
-.container-modal {
-  max-width: 900px;
-  margin: auto;
-  background: #fff;
-  padding: 30px;
-  border-radius: 8px;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-}
-
-.title1-modal {
-  font-family: 'Amino Regular 9', sans-serif;
-  color: #d32f2f;
-  /* Un rojo más oscuro para el título principal */
-  text-align: center;
-  margin-bottom: 20px;
-  font-size: 2.5em;
-  text-transform: uppercase;
-}
-
-.title2-modal {
-  color: #c62828;
-  /* Un rojo similar para las secciones */
-  border-bottom: 2px solid #eee;
-  padding-bottom: 10px;
-  margin-top: 30px;
-  font-size: 1.8em;
-}
-
-.title3-modal {
-  font-family: 'Amino Regular 9', sans-serif;
-  color: #e53935;
-  /* Un rojo un poco más claro para subtítulos */
-  margin-top: 20px;
-  font-size: 1.4em;
-}
-
-p {
-  margin-bottom: 15px;
-  text-align: justify;
-}
-
-ul {
-  list-style: disc;
-  margin-left: 25px;
-  margin-bottom: 15px;
-}
-
-ol {
-  list-style: decimal;
-  margin-left: 25px;
-  margin-bottom: 15px;
-}
-
-table {
-  width: 100%;
-  border-collapse: collapse;
-  margin-bottom: 20px;
-  font-size: 0.9em;
-}
-
-th,
-td {
-  border: 1px solid #ddd;
-  padding: 10px;
-  text-align: left;
-}
-
-th {
-  background-color: #f2f2f2;
-  color: #555;
-  font-weight: bold;
-}
-
-td:first-child {
-  font-weight: bold;
-}
-
-.highlight {
-  font-family: 'Amino Regular 9', sans-serif;
-  background-color: #fff3e0;
-  /* Un color suave para resaltar */
-  padding: 10px;
-  border-left: 5px solid #ff9800;
-  margin-bottom: 20px;
-}
-
-footer {
-  font-family: 'Amino Regular 9', sans-serif;
-  text-align: center;
-  margin-top: 40px;
-  padding-top: 20px;
-  border-top: 1px solid #eee;
-  color: #777;
-  font-size: 0.9em;
-}
-
-/* Estilos específicos para el título de la dinámica */
-.promo-title {
-  font-family: 'Amino Regular 9', sans-serif;
-
-  font-size: 2.2em;
-  font-weight: bold;
-  color: #c62828;
-  text-align: center;
-  margin-bottom: 30px;
-}
 
 /*Cuenta*/
 .form-container {
