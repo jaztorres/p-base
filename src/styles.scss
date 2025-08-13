@@ -102,7 +102,91 @@ p { font-family: 'Amino Regular', sans-serif;}
   text-decoration: underline;
 }
 
-/*hero-section*/
+/*NUEVO
+*hero
+/* Hero Section - Estilos de Base */
+.yellow-line {
+  height: 7px;
+  background-color: #ffd308;
+  width: 100%;
+}
+
+.hero-section {
+  position: relative;
+  height: 100vh;
+  background-image: url(/assets/bg/bg-tr-2000.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center; /* Centrar el contenido horizontalmente */
+  padding: 20px;
+  text-align: center;
+}
+
+.glow-effect {
+  animation: glow 1.5s ease-in-out infinite alternate;
+  max-width: 100%; /* Asegura que la imagen no exceda su contenedor */
+}
+
+@keyframes glow {
+  from { filter: drop-shadow(0 0 5px rgba(255, 255, 255, 0.8)); }
+  to { filter: drop-shadow(0 0 20px rgba(255, 255, 255, 1)); }
+}
+
+/* Animación del botón de salto */
+.jump-button {
+  position: absolute;
+  bottom: 50px;
+  left: 50%;
+  transform: translateX(-50%);
+  animation: jump 1s ease-in-out infinite;
+  z-index: 10; /* Asegura que el botón esté por encima del contenido */
+  border: none;
+  background: transparent;
+}
+
+@keyframes jump {
+  0%, 100% { transform: translateX(-50%) translateY(0); }
+  50% { transform: translateX(-50%) translateY(-20px); }
+}
+
+/* Estilos específicos para el logo y letrero */
+.letrero {
+  max-width: 100%;
+}
+
+/* Media Queries para diferentes dispositivos */
+
+/* Dispositivos Móviles (por defecto) */
+/* El diseño base ya está optimizado para móviles */
+
+/* Tabletas (mediano y arriba) */
+@media (min-width: 768px) {
+  .hero-section {
+    padding: 40px;
+  }
+}
+
+/* Escritorio (grande y arriba) */
+@media (min-width: 992px) {
+  .hero-section {
+    padding: 60px;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+/*hero-section ANTERIOR*/
+/*
 .yellow-line {
   height: 7px;
   background-color: #ffd308;
@@ -169,7 +253,7 @@ p { font-family: 'Amino Regular', sans-serif;}
 .jump-button svg {
   width: 50px;
   height: 50px;
-}
+}*/
 
 /* MECANICA*/
 
@@ -292,6 +376,22 @@ p { font-family: 'Amino Regular', sans-serif;}
     .fade-rotate-image {
       margin-bottom: 20px;
     }
+
+    .hero-section {
+  position: relative;
+  height: 50vh;
+  background-image: url(/assets/bg/bg-tr-2000.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  padding: 20px;
+}
+
+
+
+
   }
 }
 
