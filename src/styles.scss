@@ -442,14 +442,16 @@ p {
 
 ul {
   list-style: disc;
-  margin-left: 25px;
-  margin-bottom: 15px;
+  text-align: justify;
+  //margin-left: 25px;
+  //margin-bottom: 15px;
 }
 
 ol {
   list-style: decimal;
-  margin-left: 25px;
-  margin-bottom: 15px;
+  text-align: left;
+  //margin-left: 25px;
+  //margin-bottom: 15px;
 }
 
 table {
@@ -537,6 +539,95 @@ footer {
 
 
 
+//FQA
+.modal-title2{
+  font-family: 'Amino Regular 9 black', sans-serif;
+  color: #00a651;
+  font-weight: 500;
+  font-size: 20px;
+  font-weight: normal;
+  padding: 5px;
+  text-align: left;
+}
+.faq-item {
+  font-family: 'Amino Regular 9 black', sans-serif;
+  color: #00a651;
+  font-weight: 500;
+  font-size: 18px;
+  font-weight: normal;
+  padding: 5px;
+  text-align: left;
+}
+
+.faq-question {
+   font-family: 'Amino Regular 9 black', sans-serif;
+  color: #00a651;
+  font-weight: 500;
+  font-size: 20px;
+  font-weight: normal;
+  padding: 5px;
+  text-align: left;
+}
+
+.faq-answer {
+   font-family: 'Amino Regular', sans-serif;
+  color: #363636;
+  font-weight: 100;
+  font-size: 15px;
+  font-weight: normal;
+  padding: 5px;
+  text-align: left;
+}
+
+.btn-text {
+   font-family: 'Amino Regular 9 black', sans-serif;
+  color: #ffffff;
+  font-weight: 100;
+  font-size: 15px;
+  font-weight: normal;
+  padding: 5px;
+  text-align: center;
+}
+
+.btn-red {
+    background-color: #c00b0b;
+    color: white;
+    font-family: 'Amino Regular 9 black', sans-serif;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    margin-top: 20px;
+    margin-right: 20px;
+}
+
+.btn-green {
+    background-color: #00a651;
+    
+    color: white;
+    font-family: 'Amino Regular 9 black', sans-serif;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    margin-top: 20px;
+    margin-right: 20px;
+}
+
+.btn-gray {
+    background-color: #8d8f8e;
+    color: white;
+    font-family: 'Amino Regular 9 black', sans-serif;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    margin-top: 20px;
+    margin-right: 20px;
+}
+
+//Aviso de Privacidad
+.txt-p {
+  font-family: 'Amino Regular 9 black', sans-serif;
+  color: #333;
+}
 
 
 /* Carousel base class */
