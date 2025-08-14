@@ -11,12 +11,14 @@
         <li class="nav-item" *ngFor="let link of navLinks">
           <a
             class="nav-link menu-nav-item"
-            [routerLink]="link.path"
+            [routerLink]="link.path"  [fragment]="link.fragment"
             routerLinkActive="active"
             ariaCurrentWhenActive="page"
           >
             {{ link.label }}
           </a>
+ 
+
         </li>
         <li class="nav-item">
           <a
