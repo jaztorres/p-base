@@ -66,8 +66,64 @@ h2 {
 
 p { font-family: 'Amino Regular', sans-serif;}
 
+//Nav nuevo
+//* src/app/components/navbar/navbar.component.css */
 
-/*nav- header*/
+/* Estilos para el logo */
+.logo-img {
+  height: 40px; /* Ajusta el tamaño del logo según sea necesario */
+  width: auto;
+}
+
+/* Estilos de los enlaces del menú */
+.menu-nav-item {
+  color: #20ae61 !important;
+  text-transform: uppercase;
+  font-weight: 500;
+  transition: all 0.3s ease-in-out;
+}
+
+.menu-nav-item:hover,
+.menu-nav-item.active {
+  color: #39bc76 !important;
+  font-weight: 700; /* Resalta el enlace activo o al pasar el mouse */
+}
+
+/* Estilo específico para "Mi Cuenta" */
+.menu-nav-item-special {
+  color: #ff0000 !important;
+  text-transform: uppercase;
+  font-weight: 700;
+  //border: 1px solid #ff0000;
+ // border-radius: 5px;
+  //padding: 5px 10px;
+  transition: all 0.3s ease-in-out;
+}
+
+.menu-nav-item-special:hover,
+.menu-nav-item-special.active {
+  background-color: #ff0000;
+  color: #fff !important;
+}
+
+/* Estilos para el texto en el navbar cuando se contrae */
+.navbar-text {
+  text-transform: uppercase;
+  font-weight: 600;
+  color: #20ae61;
+}
+
+/* Media query para dispositivos móviles */
+@media (max-width: 991px) {
+  .menu-nav-item-special {
+    margin-top: 10px; /* Añade espacio entre el último enlace y "Mi Cuenta" en móviles */
+    display: inline-block;
+  }
+}
+
+
+
+/*nav- header
 .nav-text {
   color: #20ae61;
   text-transform: uppercase;
@@ -84,11 +140,11 @@ p { font-family: 'Amino Regular', sans-serif;}
   background-color: #fff;
 }
 
-/* Enlaces del menú */
+/* Enlaces del menú 
 .menu-nav a {
   text-decoration: none;
   color: #39bc76;
-  /* Verde para los enlaces */
+  /* Verde para los enlaces 
   margin: 0 15px;
   font-size: 16px;
   font-weight: bold;
@@ -97,14 +153,14 @@ p { font-family: 'Amino Regular', sans-serif;}
 
 .menu-nav a:last-child {
   color: #ff0000;
-  /* Rojo para "MI CUENTA" */
+  /* Rojo para "MI CUENTA" 
   text-transform: uppercase;
 }
 
-/* Hover (opcional) */
+/* Hover (opcional) 
 .menu-nav a:hover {
   text-decoration: underline;
-}
+}*/
 
 /*NUEVO
 *hero
@@ -308,7 +364,161 @@ p { font-family: 'Amino Regular', sans-serif;}
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
-/*Premios*/
+/*PREMIOS UPDATE*/
+
+.premio-section {
+  background-image: url('/assets/bg/bg-3.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 80px 0;
+  position: relative;
+  min-height: 600px;
+  display: flex;
+  align-items: center;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    //background: rgba(0, 0, 0, 0.4); /* Slightly darker overlay for better contrast */
+    z-index: 1;
+  }
+
+  .container {
+    position: relative;
+    z-index: 2;
+  }
+
+  
+
+  /* Shine Effect for Left Image */
+  .shine-container {
+    position: relative;
+    display: inline-block;
+    overflow: hidden;
+
+    .shine-image {
+      border-radius: 10px;
+      max-width: 100%;
+      height: auto;
+      transition: transform 0.3s ease;
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      top: -50%;
+      left: -50%;
+      width: 20%;
+      height: 200%;
+      background: linear-gradient(
+        to right,
+        rgba(255, 255, 255, 0) 0%,
+        rgba(255, 255, 255, 0.3) 50%,
+        rgba(255, 255, 255, 0) 100%
+      );
+      transform: rotate(45deg);
+      animation: shine 3s infinite;
+    }
+  }
+
+  /* Fade and Rotate Effect for Right Image */
+  .fade-rotate-image {
+    border-radius: 10px;
+    max-width: 100%;
+    height: auto;
+    animation: fadeRotate 4s ease-in-out infinite;
+  }
+
+  /* Responsive Adjustments */
+  /* Desktop (≥992px) */
+  @media (min-width: 992px) {
+    padding: 80px 0;
+    min-height: 600px;
+
+    .shine-container,
+    .fade-rotate-image {
+      max-width: 80%;
+    }
+
+    h2 {
+      font-size: 3rem;
+    }
+  }
+
+  /* Tablet (768px–991px) */
+  @media (min-width: 768px) and (max-width: 991px) {
+    padding: 60px 0;
+    min-height: 500px;
+
+    .shine-container,
+    .fade-rotate-image {
+      max-width: 90%;
+      margin-bottom: 20px;
+    }
+
+    h2 {
+      font-size: 2.2rem;
+    }
+  }
+
+  /* Mobile (≤767px) */
+  @media (max-width: 767px) {
+    padding: 40px 0;
+    min-height: 400px;
+
+    .shine-container,
+    .fade-rotate-image {
+      max-width: 100%;
+      margin-bottom: 20px;
+    }
+
+    h2 {
+      font-size: 1.8rem;
+    }
+
+    .shine-container::after {
+      animation: shine 2s infinite; /* Faster animation for mobile */
+    }
+
+    .fade-rotate-image {
+      animation: fadeRotate 3s ease-in-out infinite; /* Faster animation for mobile */
+    }
+  }
+}
+
+/* Shine Animation */
+@keyframes shine {
+  0% {
+    left: -50%;
+  }
+  100% {
+    left: 150%;
+  }
+}
+
+/* Fade and Rotate Animation */
+@keyframes fadeRotate {
+  0%, 100% {
+    opacity: 1;
+    transform: rotate(0deg);
+  }
+  50% {
+    opacity: 0.7;
+    transform: rotate(5deg); /* Reduced rotation for subtlety */
+  }
+}
+
+
+
+
+
+
+/*Premios anterior*/
 .premio-section {
   background-image: url('/assets/bg/bg-3.jpg');
   background-size: cover;
@@ -381,7 +591,7 @@ p { font-family: 'Amino Regular', sans-serif;}
       margin-bottom: 20px;
     }
 
-    .hero-section {
+  /*  .hero-section {
   position: relative;
   height: 50vh;
   background-image: url(/assets/bg/bg-tr-2000.jpg);
@@ -391,15 +601,76 @@ p { font-family: 'Amino Regular', sans-serif;}
   display: flex;
   align-items: center;
   padding: 20px;
-}
+}*/
+  }
 
+ /* Responsive Adjustments */
+  /* Desktop (≥992px) */
+  @media (min-width: 992px) {
+    padding: 80px 0;
+    min-height: 600px;
 
+    .shine-container,
+    .fade-rotate-image {
+      max-width: 80%;
+    }
 
+    h2 {
+      font-size: 3rem;
+    }
+  }
 
+  /* Tablet (768px–991px) */
+  @media (min-width: 768px) and (max-width: 991px) {
+    padding: 60px 0;
+    min-height: 500px;
+
+    .shine-container,
+    .fade-rotate-image {
+      max-width: 90%;
+      margin-bottom: 20px;
+    }
+
+    h2 {
+      font-size: 2.2rem;
+    }
+  }
+
+  /* Mobile (≤767px) */
+  @media (max-width: 767px) {
+    padding: 40px 0;
+    min-height: 400px;
+
+    .shine-container,
+    .fade-rotate-image {
+      max-width: 100%;
+      margin-bottom: 20px;
+    }
+
+    h2 {
+      font-size: 1.8rem;
+    }
+
+    .shine-container::after {
+      animation: shine 2s infinite; /* Faster animation for mobile */
+    }
+
+    .fade-rotate-image {
+      animation: fadeRotate 3s ease-in-out infinite; /* Faster animation for mobile */
+    }
   }
 }
 
-// Shine Animation
+
+
+
+
+
+
+
+
+
+//Shine Animation
 @keyframes shine {
   0% {
     left: -50%;
@@ -425,11 +696,12 @@ p { font-family: 'Amino Regular', sans-serif;}
   }
 }
 .img-fluid2{
-
-    max-width: 130%;
+    max-width: 105%;
     height: auto;
-    margin-bottom: -101px;
+    margin-bottom: -165px;
 }
+// termina premios
+
 
 /*Winers*/
 /* Ajustes adicionales para mejorar la responsividad */
