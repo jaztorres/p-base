@@ -1120,3 +1120,25 @@ select {
   font-family: 'Amino Regular 9', sans-serif;
   background-color: #cc0000;
 }
+
+// form cuenta
+
+.formulario-bg {
+  background-image: url('/assets/bg/bg-yellow2.png');
+  background-size: cover;
+  background-position: center;
+  height: 100vh; /* Ocupa la altura completa de la ventana */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.formulario-card {
+  background-color: rgba(255, 255, 255, 0.8); /* Fondo transparente */
+  border: 2px solid green; /* Borde verde */
+  max-width: 600px; /* Ancho máximo de la tarjeta */
+}
+
+.linea-verde {
+  border-top: 1px solid green;
+}
