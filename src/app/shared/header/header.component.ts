@@ -18,10 +18,11 @@ export class HeaderComponent {
   // Definimos la estructura de nuestros enlaces.
   // Esto hace que el menú sea dinámico y fácil de mantener.
   navLinks = [
+    
     { label: 'Mecánica', path: '/home', fragment:'meca'},
     { label: 'Registro', path: '/registro' },
-    { label: 'Premios', path: '/home', fragment:'premio'},
-    { label: 'Ganadores', path: '/home' , fragment:'gana' }
+    { label: 'Premios', path: '/home', fragment:''},
+    { label: 'Ganadores', path: '/home' , fragment:'' }
   ];
 
 
