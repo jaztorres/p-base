@@ -1123,22 +1123,98 @@ select {
 
 // form cuenta
 
+
 .formulario-bg {
   background-image: url('/assets/bg/bg-yellow2.png');
   background-size: cover;
   background-position: center;
-  height: 100vh; /* Ocupa la altura completa de la ventana */
+  height:110vh; /* Ocupa la altura completa de la ventana */
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
+.formulario-title  {
+  background-image: url('/assets/bg/bg-yellow2.png');
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.h2-form {
+  font-family: 'Amino Regular', sans-serif;
+  color: #ed1c24;
+    font-weight: 500;
+    font-size: 20px;
+    font-weight: bold;
+    padding: 10px;
+    text-align:left;
+}
+
 .formulario-card {
   background-color: rgba(255, 255, 255, 0.8); /* Fondo transparente */
   border: 2px solid green; /* Borde verde */
-  max-width: 600px; /* Ancho máximo de la tarjeta */
+  max-width: 850px; /* Ancho máximo de la tarjeta */
 }
 
 .linea-verde {
   border-top: 1px solid green;
+}
+
+
+// nuevo registro
+
+.background-container {
+  background-image: url('/assets/bg/bg-yellow2.png'); /* Reemplaza con la URL de tu imagen de fondo */
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+/* Estilo para el contenedor del formulario */
+.form-wrapper {
+  max-width: 950px; /* Ancho fijo para desktop */
+  width: 100%; /* Ocupa todo el ancho disponible en pantallas pequeñas */
+}
+
+/* Estilo para el "card" del formulario */
+.transparent-card {
+  background-color: rgba(255, 255, 255, 0.7); /* Fondo transparente con opacidad del 70% */
+  border: 1px solid #28a745; /* Borde verde */
+  padding: 20px;
+}
+
+/* Estilo para la línea verde divisoria */
+.green-line {
+  border-top: 1px solid #28a745;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+/* Estilo para el botón de envío */
+.submit-btn {
+  background-color: #dc3545; /* Color rojo */
+  color: white; /* Letras blancas */
+  border: none;
+}
+
+/* Estilo para el enlace de "Iniciar sesión" */
+.login-link {
+  color: #dc3545; /* Color rojo */
+  text-decoration: none;
+}
+
+/* Estilos responsive adicionales para pantallas más pequeñas (opcional, Bootstrap ya lo maneja bien) */
+@media (max-width: 768px) {
+  .header-row h2,
+  .header-row a {
+    text-align: center;
+  }
 }

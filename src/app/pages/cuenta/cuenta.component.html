@@ -1,11 +1,19 @@
 <app-header></app-header>
+
+
+
+
+
+
+
+
 <div class="container-fluid formulario-bg">
   <div class="row pt-5">
     <div class="col-12">
       <div class="card p-4 mx-auto formulario-card">
         <div class="row mb-3">
           <div class="col-6">
-            <h2 class="text-danger">Crear una cuenta</h2>
+            <h2 class="h2-form">Crear una cuenta</h2>
           </div>
           <div class="col-6 text-end">
             <a href="#" class="text-secondary">Iniciar sesión</a>
@@ -15,7 +23,7 @@
         <hr class="linea-verde" />
 
         <form>
-          <div class="mb-3">
+          <div class="mb-3 col-12">
             <label for="nombreCompleto" class="form-label">Nombre completo</label>
             <input
               type="text"
@@ -145,12 +153,8 @@
 
 
 
+<!--Anterior-->
 
-
-
-
-
-<!--
 <div class="container mt-5">
   <div class="row justify-content-center">
     <div class="col-md-6">
@@ -180,7 +184,7 @@
       </div>
     </div>
   </div>
-</div>-->
+</div>
 <!--
 <div class="form-container">
   <h2 *ngIf="!isLogin">Crear una cuenta</h2>
@@ -206,8 +210,8 @@
     </div>
     <button type="submit" class="register-btn">Registrar</button>
   </form>
-</div>-->
-<!--
+</div>
+
 <div class="form-container" [ngStyle]="{'background-image': 'url(' + backgroundImage + ')'}">
   <form (ngSubmit)="onSubmit()" class="transparent-form p-4">
     <h2 class="text-center mb-4">Crear una cuenta</h2>

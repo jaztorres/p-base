@@ -4,14 +4,18 @@ import { FormsModule} from '@angular/forms'
 import { CommonModule } from '@angular/common';
 
 
+import { FormBuilder, FormGroup, Validators, ReactiveFormsModule } from '@angular/forms';
+
+
+
 @Component({
   selector: 'app-cuenta',
   standalone: true,
-  imports: [HeaderComponent,CommonModule, FormsModule,],
+  imports: [HeaderComponent,CommonModule, FormsModule, ReactiveFormsModule, CommonModule],
   templateUrl: './cuenta.component.html',
   styles: ``
 })
-export class CuentaComponent {
+export class CuentaComponent  {
 
   @Input() backgroundImage: string = 'assets/background.jpg'; // Default background image
   model = {
@@ -30,5 +34,6 @@ export class CuentaComponent {
   }
 }
 
+//// nuevo
 
 
