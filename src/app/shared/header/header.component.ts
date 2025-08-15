@@ -21,8 +21,8 @@ export class HeaderComponent {
     
     { label: 'Mecánica', path: '/home', fragment:'meca'},
     { label: 'Registro', path: '/registro' },
-    { label: 'Premios', path: '/home', fragment:''},
-    { label: 'Ganadores', path: '/home' , fragment:'' }
+    { label: 'Premios', path: '/home', fragment:'premio'},
+    { label: 'Ganadores', path: '/home' , fragment:'gana' }
   ];
 
 

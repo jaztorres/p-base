@@ -3,17 +3,27 @@ import { HeaderComponent } from '../../shared/header/header.component';
 import { FooterComponent } from '../../shared/footer/footer.component';
 import { CommonModule } from '@angular/common';
 import { FormBuilder, FormGroup, Validators, ReactiveFormsModule } from '@angular/forms';
+import { RouterLink } from '@angular/router';
+
 
 @Component({
   selector: 'app-registro',
   standalone: true,
-  imports: [HeaderComponent, CommonModule, ReactiveFormsModule],
+  imports: [HeaderComponent, CommonModule, ReactiveFormsModule,RouterLink],
   templateUrl: './registro.component.html',
   styles: ``
 })
 export class RegistroComponent {
+
+///nuevo
+  isRegisterFormVisible: boolean = true; // Muestra el formulario de registro por defecto
+
+
+
+ //////Anterior//// 
   // Declaramos el formulario como un objeto de tipo FormGroup.
-  registroForm: FormGroup;
+registroForm: FormGroup;
+  loginForm: any;
 
   // En el constructor, inyectamos el FormBuilder para crear los controles del formulario.
   constructor(private fb: FormBuilder) {
@@ -42,7 +52,20 @@ export class RegistroComponent {
       this.registroForm.markAllAsTouched();
     }
   }
+
+// Manejo del envío del formulario de login
+  onLogin() {
+    if (this.loginForm.valid) {
+      console.log('Formulario de login enviado:', this.loginForm.value);
+      // Aquí iría la lógica de autenticación
+      alert('Inicio de sesión exitoso.');
+    } else {
+      console.log('El formulario de login no es válido.');
+      this.loginForm.markAllAsTouched();
+    }
+  }
+
+
+
+
 }
-
-
-
