@@ -4,46 +4,46 @@
     <div class="form-wrapper">
         <div class="row header-row">
             <div class="col-6">
-                <h2 class="h2-form">Crear una cuenta</h2>
+                <h2 class="h2-form"><a (click)="showForm('register')">Crear una cuenta</a></h2>
             </div>
             <div class="col-6 text-start">
-                <a href="#" class="login-link">Iniciar sesión</a>
+                <a (click)="showForm('login')" class="login-link">Iniciar sesión</a>
             </div>
         </div>
 
         <div class="card transparent-card">
             <div class="card-body">
               
-                <form [formGroup]="registroForm" (ngSubmit)="onSubmit()">
+                <form *ngIf="isRegisterFormVisible" [formGroup]="registrationForm" (ngSubmit)="onRegister()">
                     <div class="mb-3">
-                        <label for="nombreCompleto" class=" form-label-tex">Nombre completo</label>
-                        <input type="text" class="form-control" id="nombreCompleto" formControlName="nombreCompleto"
-                            placeholder="Ingresa tu nombre completo">
+                        <label for="nombreCompleto" class=" form-label label-text">Nombre completo</label>
+                        <input type="text" class="form-control input-text-color" id="nombreCompleto" formControlName="nombreCompleto"
+                            placeholder="Ingresa tu nombre completo" required>
                     </div>
 
                     <div class="row">
                         <div class="col-md-6 mb-3">
-                            <label for="correoElectronico" class="form-label">Correo electrónico</label>
-                            <input type="email" class="form-control" id="correoElectronico"
-                                formControlName="correoElectronico" placeholder="Ingresa tu correo electrónico">
+                            <label for="correoElectronico" class="form-label label-text">Correo electrónico</label>
+                            <input type="email" class="form-control input-text-color" id="correoElectronico"
+                                formControlName="correoElectronico" placeholder="Ingresa tu correo electrónico" required>
                         </div>
                         <div class="col-md-6 mb-3">
-                            <label for="contrasena" class="form-label">Contraseña</label>
-                            <input type="password" class="form-control" id="contrasena" formControlName="contrasena"
-                                placeholder="Crea una contraseña">
+                            <label for="contrasena" class="form-label label-text">Contraseña</label>
+                            <input type="password" class="form-control input-text-color" id="contrasena" formControlName="contrasena"
+                                placeholder="Crea una contraseña" required>
                         </div>
                     </div>
 
                     <div class="mb-3">
-                        <label for="direccionCompleta" class="form-label">Dirección completa</label>
-                        <input type="text" class="form-control" id="direccionCompleta"
-                            formControlName="direccionCompleta" placeholder="Ingresa tu dirección completa">
+                        <label for="direccionCompleta" class="form-label label-text">Dirección completa</label>
+                        <input type="text" class="form-control input-text-color" id="direccionCompleta"
+                            formControlName="direccionCompleta" placeholder="Ingresa tu dirección completa" required>
                     </div>
 
                     <div class="row">
                         <div class="col-md-6 mb-3">
-                            <label for="estado" class="form-label">Estado</label>
-                            <select class="form-select" id="estado" formControlName="estado">
+                            <label for="estado" class="form-label label-text">Estado</label>
+                            <select class="form-select input-text-color" id="estado" formControlName="estado" required>
                                 <option value="" disabled selected>Selecciona una opción</option>
                                 <option value="Aguascalientes">Aguascalientes</option>
                                 <option value="Baja California">
@@ -90,9 +90,9 @@
                             </select>
                         </div>
                         <div class="col-md-6 mb-3">
-                            <label for="telefonoCelular" class="form-label">Teléfono / Celular</label>
-                            <input type="tel" class="form-control" id="telefonoCelular"
-                                formControlName="telefonoCelular" placeholder="Ingresa tu teléfono o celular">
+                            <label for="telefonoCelular" class="form-label label-text">Teléfono / Celular</label>
+                            <input type="tel" class="form-control input-text-color" id="telefonoCelular"
+                                formControlName="telefonoCelular" placeholder="Ingresa tu teléfono o celular" required>
                         </div>
                     </div>
 
@@ -102,28 +102,25 @@
                         <div class="col-md-6 mb-3 mb-md-0">
                             <div class="form-check">
                                 <input class="form-check-input" type="checkbox" id="aceptoTerminos"
-                                    formControlName="aceptoTerminos">
-                            <label class="form-check-label" for="aceptoTerminos">Acepto
-                            <a class=" form-label-tex" target="_blank" href="#" data-bs-toggle="modal" data-bs-target="#termsModal">Bases</a>
-                            y <a class=" form-label-tex" target="_blank" href="#" data-bs-toggle="modal" data-bs-target="#privacyModal">Aviso de Privacidad</a><br /><span class="text-danger">
+                                    formControlName="aceptoTerminos" required>
+                            <label class="form-check-label input-text-color " for="aceptoTerminos">Acepto
+                            <a class=" input-text-color" target="_blank" href="#" data-bs-toggle="modal" data-bs-target="#termsModal">Bases</a>
+                            y <a class=" input-text-color" target="_blank" href="#" data-bs-toggle="modal" data-bs-target="#privacyModal">Aviso de Privacidad</a><br /><span class="text-danger">
                             Este campo es requerido.
                             </span></label>
                             </div>
                         </div>
                         <div class="col-md-6 text-end">
-                            <button type="submit" class="btn btn-danger submit-btn">Registar</button>
+                            <button type="submit" class="btn btn-danger submit-btn" [disabled]="!registrationForm.valid">Registar</button>
                         </div>
                     </div>
-
                 </form>
-            </div>
-        </div>
-    </div>
-</div>
+ 
 
-<div>
+
 <form *ngIf="!isRegisterFormVisible" [formGroup]="loginForm" (ngSubmit)="onLogin()">
-        <h2 class="text-start mb-4">Iniciar Sesión</h2>
+       
+ <h2 class="text-start mb-4">Iniciar Sesión</h2>
         <div class="mb-3">
           <label for="emailLogin" class="form-label">Correo electrónico</label>
           <input type="email" id="emailLogin" class="form-control" formControlName="email" required>
@@ -136,7 +133,8 @@
           <button type="submit" class="btn btn-primary" [disabled]="!loginForm.valid">INGRESAR</button>
         </div>
       </form>
-
+</div>
+</div>
 </div>
 
 
@@ -148,6 +146,7 @@
 
 
 
+<!--
 <div class="row">
   <h1>Participa</h1>
   <div class="col-md-2"></div>
@@ -224,4 +223,4 @@
   </div>
   <div class="col-md-2"></div>
 
-</div>
+</div>-->

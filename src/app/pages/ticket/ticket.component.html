@@ -1,0 +1,177 @@
+<p>juego works!</p>
+<div class="container my-5" style="max-width: 950px;">
+  <!-- Imagen de fondo (solo en create/login) -->
+  <div *ngIf="currentView === 'create' || currentView === 'login'" class="bg-image mb-4" style="height: 200px; background-image: url('assets/background.jpg'); background-size: cover;"></div>
+
+  <!-- Navegación Headers -->
+  <div class="row mb-3">
+    <div class="col-6 text-start">
+      <h2 [ngClass]="{'text-danger': true}">{{ headerLeft }}</h2>
+    </div>
+    <div class="col-6 text-start">
+      <a href="#" (click)="toggleView()" class="text-decoration-none">{{ headerRight }}</a>
+    </div>
+  </div>
+
+  <!-- Card Principal (transparente con borde verde) -->
+  <div class="card border-0" style="background: transparent;">
+    <div class="card-body border-bottom border-success border-2 p-4">
+
+      <!-- Vista: Crear Cuenta -->
+      <form *ngIf="currentView === 'create'" [formGroup]="createForm" (ngSubmit)="onCreateAccount()">
+        <div class="row">
+          <div class="col-12 mb-3">
+            <label>Nombre completo</label>
+            <input formControlName="fullName" class="form-control" />
+          </div>
+          <div class="col-md-6 mb-3">
+            <label>Correo electrónico</label>
+            <input formControlName="email" class="form-control" type="email" />
+          </div>
+          <div class="col-md-6 mb-3">
+            <label>Contraseña</label>
+            <input formControlName="password" class="form-control" type="password" />
+          </div>
+          <div class="col-12 mb-3">
+            <label>Dirección completa</label>
+            <input formControlName="address" class="form-control" />
+          </div>
+          <div class="col-12 mb-3">
+            <label>Estado</label>
+            <select formControlName="state" class="form-select">
+              <option>Selecciona una opción</option>
+              <option value="CDMX">CDMX</option>
+              <!-- Agrega más estados -->
+            </select>
+          </div>
+          <div class="col-12 mb-3">
+            <label>Teléfono / Celular</label>
+            <input formControlName="phone" class="form-control" type="tel" />
+          </div>
+        </div>
+        <hr class="border-success border-2">
+        <div class="row align-items-center">
+          <div class="col-md-6 text-start">
+            <div class="form-check">
+              <input formControlName="accept" class="form-check-input" type="checkbox" />
+              <label class="form-check-label">Acepto Bases y Aviso de esta promoción.</label>
+            </div>
+          </div>
+          <div class="col-md-6 text-end">
+            <button type="submit" class="btn btn-danger text-white">Crear cuenta</button>
+          </div>
+        </div>
+      </form>
+
+      <!-- Vista: Iniciar Sesión -->
+      <form *ngIf="currentView === 'login'" [formGroup]="loginForm" (ngSubmit)="onLogin()">
+        <div class="row">
+          <div class="col-12 mb-3">
+            <label>Correo electrónico</label>
+            <input formControlName="email" class="form-control" type="email" />
+          </div>
+          <div class="col-12 mb-3">
+            <label>Contraseña</label>
+            <input formControlName="password" class="form-control" type="password" />
+          </div>
+        </div>
+        <hr class="border-success border-2">
+        <div class="row">
+          <div class="col-12 text-start">
+            <button type="submit" class="btn btn-danger">Ingresar</button>
+          </div>
+        </div>
+      </form>
+
+      <!-- Vista: Datos de Ticket -->
+      <div *ngIf="currentView === 'ticket'">
+        <div class="row mb-3">
+          <div class="col-6 text-start">
+            <h2>Datos de ticket</h2>
+          </div>
+          <div class="col-6 text-end">
+            <p>¡Hola, {{ userName }}!</p>
+            <a href="#" *ngIf="tickets.length > 0" (click)="goToList()">Ver mi lista</a>
+          </div>
+        </div>
+        <form [formGroup]="ticketForm" (ngSubmit)="onSubmitTicket()">
+          <div class="row">
+            <div class="col-md-4 mb-3">
+              <label>Tienda</label>
+              <input formControlName="store" class="form-control" />
+            </div>
+            <div class="col-md-4 mb-3">
+              <label>Fecha</label>
+              <input formControlName="date" class="form-control" type="date" />
+            </div>
+            <div class="col-md-4 mb-3">
+              <label>No. de ticket</label>
+              <input formControlName="ticketNo" class="form-control" />
+            </div>
+          </div>
+          <p>Sube la fotografía de tu ticket de compra</p>
+          <div class="input-group mb-3">
+            <span class="input-group-text">{{ fileName }}</span>
+            <button type="button" class="btn btn-success" (click)="fileInput.click()">Seleccionar archivo</button>
+            <input #fileInput type="file" formControlName="file" style="display: none;" (change)="onFileChange($event)" />
+          </div>
+          <hr>
+          <div class="row">
+            <div class="col-12 text-start">
+              <button type="submit" class="btn btn-primary">Enviar</button>
+            </div>
+          </div>
+        </form>
+      </div>
+
+      <!-- Vista: Mi Lista -->
+      <div *ngIf="currentView === 'list'">
+        <div class="row mb-3">
+          <div class="col-6 text-start">
+            <h2>Mi lista</h2>
+          </div>
+          <div class="col-6 text-end">
+            <p>¡Hola, {{ userName }}!</p>
+            <a href="#" (click)="goToTicket()">Registrar ticket</a>
+          </div>
+        </div>
+        <table class="table table-responsive">
+          <thead>
+            <tr>
+              <th>No.</th>
+              <th>Tienda</th>
+              <th>Fecha</th>
+              <th>No. de ticket</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let ticket of tickets; let i = index">
+              <td>{{ i + 1 }}</td>
+              <td>{{ ticket.store }}</td>
+              <td>{{ ticket.date }}</td>
+              <td>{{ ticket.ticketNo }}</td>
+            </tr>
+          </tbody>
+        </table>
+        <div class="text-end">
+          <button class="btn btn-danger" (click)="openLogoutModal()">Salir</button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Modal Gracias -->
+  <div class="modal fade" id="thanksModal" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header justify-content-center">
+          <h5 class="modal-title text-danger">¡Gracias!</h5>
+        </div>
+        <div class="modal-body text-center">
+          <button class="btn btn-primary" (click)="registerAnother()">Registrar otro ticket</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
