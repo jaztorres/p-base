@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterLink, RouterLinkActive } from '@angular/router';
+import { environment } from '../../../environments/environment.development';
 
 @Component({
   selector: 'app-header',
@@ -25,5 +26,5 @@ export class HeaderComponent {
     { label: 'Ganadores', path: '/home' , fragment:'gana' }
   ];
 
-
+   isMenuOpen = false;
 }
