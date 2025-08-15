@@ -866,10 +866,10 @@ font-family: 'Amino Regular 9 black', sans-serif;
 footer {
   font-family: 'Amino Regular 9', sans-serif;
   text-align: center;
-  margin-top: 40px;
+  //margin-top: 40px;
   padding-top: 20px;
-  border-top: 1px solid #eee;
-  color: #777;
+  //border-top: 1px solid #eee;
+  //color: #777;
   font-size: 0.9em;
 }
 
@@ -1091,7 +1091,7 @@ select {
   border: none;
   border-radius: 5px;
   width: 100%;
-  max-width: 300px;
+  max-width: 900px;
   margin: 0 auto;
 }
 
@@ -1144,10 +1144,10 @@ select {
 }
 
 .h2-form {
-  font-family: 'Amino Regular', sans-serif;
+  font-family: 'Amino Regular 9 black', sans-serif;
   color: #ed1c24;
     font-weight: 500;
-    font-size: 20px;
+    font-size: xx-large;
     font-weight: bold;
     padding: 10px;
     text-align:left;
@@ -1169,9 +1169,10 @@ select {
 .background-container {
   background-image: url('/assets/bg/bg-yellow2.png'); /* Reemplaza con la URL de tu imagen de fondo */
   background-size: cover;
+  background-color: #ffd308;
   background-position: center;
   width: 100%;
-  min-height: 100vh;
+  min-height: 65vh;
   display: flex;
   justify-content: center;
   align-items: center;

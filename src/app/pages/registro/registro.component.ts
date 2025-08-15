@@ -7,7 +7,7 @@ import { FormBuilder, FormGroup, Validators, ReactiveFormsModule } from '@angula
 @Component({
   selector: 'app-registro',
   standalone: true,
-  imports: [HeaderComponent, FooterComponent,CommonModule, ReactiveFormsModule],
+  imports: [HeaderComponent, CommonModule, ReactiveFormsModule],
   templateUrl: './registro.component.html',
   styles: ``
 })
@@ -31,6 +31,7 @@ export class RegistroComponent {
 
   // Método que se ejecuta al enviar el formulario.
   onSubmit(): void {
+    
     // Verificamos si el formulario es válido.
     if (this.registroForm.valid) {
       console.log('Formulario enviado:', this.registroForm.value);

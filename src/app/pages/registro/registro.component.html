@@ -1,78 +1,118 @@
-
 <app-header></app-header>
-
-<p>registro works!</p>
-
 <div class="background-container">
-  <div class="form-wrapper">
-    <div class="row header-row">
-      <div class="col-6">
-        <h2 class="text-danger">Crear una cuenta</h2>
-      </div>
-      <div class="col-6 text-start">
-        <a href="#" class="login-link">Iniciar sesión</a>
-      </div>
+    <div class="form-wrapper">
+        <div class="row header-row">
+            <div class="col-6">
+                <h2 class="h2-form">Crear una cuenta</h2>
+            </div>
+            <div class="col-6 text-start">
+                <a href="#" class="login-link">Iniciar sesión</a>
+            </div>
+        </div>
+
+        <div class="card transparent-card">
+            <div class="card-body">
+                <form [formGroup]="registroForm" (ngSubmit)="onSubmit()">
+                    <div class="mb-3">
+                        <label for="nombreCompleto" class="form-label">Nombre completo</label>
+                        <input type="text" class="form-control" id="nombreCompleto" formControlName="nombreCompleto"
+                            placeholder="Ingresa tu nombre completo">
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-6 mb-3">
+                            <label for="correoElectronico" class="form-label">Correo electrónico</label>
+                            <input type="email" class="form-control" id="correoElectronico"
+                                formControlName="correoElectronico" placeholder="Ingresa tu correo electrónico">
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <label for="contrasena" class="form-label">Contraseña</label>
+                            <input type="password" class="form-control" id="contrasena" formControlName="contrasena"
+                                placeholder="Crea una contraseña">
+                        </div>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="direccionCompleta" class="form-label">Dirección completa</label>
+                        <input type="text" class="form-control" id="direccionCompleta"
+                            formControlName="direccionCompleta" placeholder="Ingresa tu dirección completa">
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-6 mb-3">
+                            <label for="estado" class="form-label">Estado</label>
+                            <select class="form-select" id="estado" formControlName="estado">
+                                <option value="" disabled selected>Selecciona una opción</option>
+                                <option value="Aguascalientes">Aguascalientes</option>
+                                <option value="Baja California">
+                                    Baja California
+                                </option>
+                                <option value="Baja California Sur">
+                                    Baja California Sur
+                                </option>
+                                <option value="Campeche">Campeche</option>
+                                <option value="Coahuila de Zaragoza">
+                                    Coahuila de Zaragoza
+                                </option>
+                                <option value="Colima">Colima</option>
+                                <option value="Chiapas">Chiapas</option>
+                                <option value="Chihuahua">Chihuahua</option>
+                                <option value="Ciudad de México">
+                                    Ciudad de México
+                                </option>
+                                <option value="Durango">Durango</option>
+                                <option value="Guanajuato">Guanajuato</option>
+                                <option value="Guerrero">Guerrero</option>
+                                <option value="Hidalgo">Hidalgo</option>
+                                <option value="Jalisco">Jalisco</option>
+                                <option value="México">México</option>
+                                <option value="Michoacán de Ocampo">
+                                    Michoacán de Ocampo
+                                </option>
+                                <option value="Morelos">Morelos</option>
+                                <option value="Nayarit">Nayarit</option>
+                                <option value="Nuevo León">Nuevo León</option>
+                                <option value="Oaxaca">Oaxaca</option>
+                                <option value="Puebla">Puebla</option>
+                                <option value="Querétaro">Querétaro</option>
+                                <option value="Quintana Roo">Quintana Roo</option>
+                                <option value="San Luis Potosí">San Luis Potosí</option>
+                                <option value="Sinaloa">Sinaloa</option>
+                                <option value="Sonora">Sonora</option>
+                                <option value="Tabasco">Tabasco</option>
+                                <option value="Tamaulipas">Tamaulipas</option>
+                                <option value="Tlaxcala">Tlaxcala</option>
+                                <option value="Veracruz">Veracruz</option>
+                                <option value="Yucatán">Yucatán</option>
+                                <option value="Zacatecas">Zacatecas</option>
+                            </select>
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <label for="telefonoCelular" class="form-label">Teléfono / Celular</label>
+                            <input type="tel" class="form-control" id="telefonoCelular"
+                                formControlName="telefonoCelular" placeholder="Ingresa tu teléfono o celular">
+                        </div>
+                    </div>
+
+                    <hr class="green-line">
+
+                    <div class="row align-items-center mt-3">
+                        <div class="col-md-6 mb-3 mb-md-0">
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" id="aceptoTerminos"
+                                    formControlName="aceptoTerminos">
+                                <label class="form-check-label" for="aceptoTerminos">
+                                    Acepto Bases y Aviso de esta promoción.
+                                </label>
+                            </div>
+                        </div>
+                        <div class="col-md-6 text-end">
+                            <button type="submit" class="btn btn-danger submit-btn">Registar</button>
+                        </div>
+                    </div>
+
+                </form>
+            </div>
+        </div>
     </div>
-    
-    <div class="card transparent-card">
-      <div class="card-body">
-        <form [formGroup]="registroForm" (ngSubmit)="onSubmit()">
-          <div class="mb-3">
-            <label for="nombreCompleto" class="form-label">Nombre completo</label>
-            <input type="text" class="form-control" id="nombreCompleto" formControlName="nombreCompleto" placeholder="Ingresa tu nombre completo">
-          </div>
-          
-          <div class="row">
-            <div class="col-md-6 mb-3">
-              <label for="correoElectronico" class="form-label">Correo electrónico</label>
-              <input type="email" class="form-control" id="correoElectronico" formControlName="correoElectronico" placeholder="Ingresa tu correo electrónico">
-            </div>
-            <div class="col-md-6 mb-3">
-              <label for="contrasena" class="form-label">Contraseña</label>
-              <input type="password" class="form-control" id="contrasena" formControlName="contrasena" placeholder="Crea una contraseña">
-            </div>
-          </div>
-          
-          <div class="mb-3">
-            <label for="direccionCompleta" class="form-label">Dirección completa</label>
-            <input type="text" class="form-control" id="direccionCompleta" formControlName="direccionCompleta" placeholder="Ingresa tu dirección completa">
-          </div>
-          
-          <div class="row">
-            <div class="col-md-6 mb-3">
-              <label for="estado" class="form-label">Estado</label>
-              <select class="form-select" id="estado" formControlName="estado">
-                <option value="" disabled selected>Selecciona una opción</option>
-                <option value="CDMX">Ciudad de México</option>
-                <option value="Jalisco">Jalisco</option>
-                <option value="Nuevo León">Nuevo León</option>
-              </select>
-            </div>
-            <div class="col-md-6 mb-3">
-              <label for="telefonoCelular" class="form-label">Teléfono / Celular</label>
-              <input type="tel" class="form-control" id="telefonoCelular" formControlName="telefonoCelular" placeholder="Ingresa tu teléfono o celular">
-            </div>
-          </div>
-          
-          <hr class="green-line">
-          
-          <div class="row align-items-center mt-3">
-            <div class="col-md-6 mb-3 mb-md-0">
-              <div class="form-check">
-                <input class="form-check-input" type="checkbox" id="aceptoTerminos" formControlName="aceptoTerminos">
-                <label class="form-check-label" for="aceptoTerminos">
-                  Acepto Bases y Aviso de esta promoción.
-                </label>
-              </div>
-            </div>
-            <div class="col-md-6 text-end">
-              <button type="submit" class="btn btn-danger submit-btn">Enviar</button>
-            </div>
-          </div>
-          
-        </form>
-      </div>
-    </div>
-  </div>
 </div>
-<app-footer></app-footer>
