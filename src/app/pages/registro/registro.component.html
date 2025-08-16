@@ -1,141 +1,145 @@
 <app-header></app-header>
 
 <div class="background-container">
-    <div class="form-wrapper">
-        <div class="row header-row">
-            <div class="col-6">
-                <h2 class="h2-form"><a (click)="showForm('register')">Crear una cuenta</a></h2>
+  <div class="form-wrapper">
+    <div class="row header-row">
+      <div class="col-6">
+        <h2 class="h2-form"><a (click)="showForm('register')">Crear una cuenta</a></h2>
+      </div>
+      <div class="col-6 text-start">
+        <a (click)="showForm('login')" class="login-link">Iniciar sesión</a>
+      </div>
+    </div>
+
+    <div class="card transparent-card">
+      <div class="card-body">
+
+        <form *ngIf="isRegisterFormVisible" [formGroup]="registrationForm" (ngSubmit)="onRegister()">
+          <div class="mb-3">
+            <label for="fullName" class=" form-label label-text">Nombre completo</label>
+            <input type="text" class="form-control input-text-color" id="fullName"
+              formControlName="fullName" placeholder="Ingresa tu nombre completo" required>
+          </div>
+
+          <div class="row">
+            <div class="col-md-6 mb-3">
+              <label for="emailRegister" class="form-label label-text">Correo electrónico</label>
+              <input type="email" class="form-control input-text-color" id="emailRegister"
+                formControlName="email" placeholder="Ingresa tu correo electrónico" required>
             </div>
-            <div class="col-6 text-start">
-                <a (click)="showForm('login')" class="login-link">Iniciar sesión</a>
+            <div class="col-md-6 mb-3">
+              <label for="passwordRegister" class="form-label label-text">Contraseña</label>
+              <input type="password" class="form-control input-text-color" id="passwordRegister" formControlName="password"
+                placeholder="Crea una contraseña" required>
             </div>
-        </div>
+          </div>
 
-        <div class="card transparent-card">
-            <div class="card-body">
-              
-                <form *ngIf="isRegisterFormVisible" [formGroup]="registrationForm" (ngSubmit)="onRegister()">
-                    <div class="mb-3">
-                        <label for="nombreCompleto" class=" form-label label-text">Nombre completo</label>
-                        <input type="text" class="form-control input-text-color" id="nombreCompleto" formControlName="nombreCompleto"
-                            placeholder="Ingresa tu nombre completo" required>
-                    </div>
+          <div class="mb-3">
+            <label for="address" class="form-label label-text">Dirección completa</label>
+            <input type="text" class="form-control input-text-color" id="address"
+              formControlName="address" placeholder="Ingresa tu dirección completa" required>
+          </div>
 
-                    <div class="row">
-                        <div class="col-md-6 mb-3">
-                            <label for="correoElectronico" class="form-label label-text">Correo electrónico</label>
-                            <input type="email" class="form-control input-text-color" id="correoElectronico"
-                                formControlName="correoElectronico" placeholder="Ingresa tu correo electrónico" required>
-                        </div>
-                        <div class="col-md-6 mb-3">
-                            <label for="contrasena" class="form-label label-text">Contraseña</label>
-                            <input type="password" class="form-control input-text-color" id="contrasena" formControlName="contrasena"
-                                placeholder="Crea una contraseña" required>
-                        </div>
-                    </div>
+          <div class="row">
+            <div class="col-md-6 mb-3">
+              <label for="state" class="form-label label-text">Estado</label>
+              <select class="form-select input-text-color" id="state" formControlName="state" required>
+                <option value="" disabled selected>Selecciona una opción</option>
+                <option value="Aguascalientes">Aguascalientes</option>
+                <option value="Baja California">
+                  Baja California
+                </option>
+                <option value="Baja California Sur">
+                  Baja California Sur
+                </option>
+                <option value="Campeche">Campeche</option>
+                <option value="Coahuila de Zaragoza">
+                  Coahuila de Zaragoza
+                </option>
+                <option value="Colima">Colima</option>
+                <option value="Chiapas">Chiapas</option>
+                <option value="Chihuahua">Chihuahua</option>
+                <option value="Ciudad de México">
+                  Ciudad de México
+                </option>
+                <option value="Durango">Durango</option>
+                <option value="Guanajuato">Guanajuato</option>
+                <option value="Guerrero">Guerrero</option>
+                <option value="Hidalgo">Hidalgo</option>
+                <option value="Jalisco">Jalisco</option>
+                <option value="México">México</option>
+                <option value="Michoacán de Ocampo">
+                  Michoacán de Ocampo
+                </option>
+                <option value="Morelos">Morelos</option>
+                <option value="Nayarit">Nayarit</option>
+                <option value="Nuevo León">Nuevo León</option>
+                <option value="Oaxaca">Oaxaca</option>
+                <option value="Puebla">Puebla</option>
+                <option value="Querétaro">Querétaro</option>
+                <option value="Quintana Roo">Quintana Roo</option>
+                <option value="San Luis Potosí">San Luis Potosí</option>
+                <option value="Sinaloa">Sinaloa</option>
+                <option value="Sonora">Sonora</option>
+                <option value="Tabasco">Tabasco</option>
+                <option value="Tamaulipas">Tamaulipas</option>
+                <option value="Tlaxcala">Tlaxcala</option>
+                <option value="Veracruz">Veracruz</option>
+                <option value="Yucatán">Yucatán</option>
+                <option value="Zacatecas">Zacatecas</option>
+              </select>
+            </div>
+            <div class="col-md-6 mb-3">
+              <label for="phone" class="form-label label-text">Teléfono / Celular</label>
+              <input type="tel" class="form-control input-text-color" id="phone"
+                formControlName="phone" placeholder="Ingresa tu teléfono o celular" required>
+            </div>
+          </div>
 
-                    <div class="mb-3">
-                        <label for="direccionCompleta" class="form-label label-text">Dirección completa</label>
-                        <input type="text" class="form-control input-text-color" id="direccionCompleta"
-                            formControlName="direccionCompleta" placeholder="Ingresa tu dirección completa" required>
-                    </div>
+          <hr class="green-line">
 
-                    <div class="row">
-                        <div class="col-md-6 mb-3">
-                            <label for="estado" class="form-label label-text">Estado</label>
-                            <select class="form-select input-text-color" id="estado" formControlName="estado" required>
-                                <option value="" disabled selected>Selecciona una opción</option>
-                                <option value="Aguascalientes">Aguascalientes</option>
-                                <option value="Baja California">
-                                    Baja California
-                                </option>
-                                <option value="Baja California Sur">
-                                    Baja California Sur
-                                </option>
-                                <option value="Campeche">Campeche</option>
-                                <option value="Coahuila de Zaragoza">
-                                    Coahuila de Zaragoza
-                                </option>
-                                <option value="Colima">Colima</option>
-                                <option value="Chiapas">Chiapas</option>
-                                <option value="Chihuahua">Chihuahua</option>
-                                <option value="Ciudad de México">
-                                    Ciudad de México
-                                </option>
-                                <option value="Durango">Durango</option>
-                                <option value="Guanajuato">Guanajuato</option>
-                                <option value="Guerrero">Guerrero</option>
-                                <option value="Hidalgo">Hidalgo</option>
-                                <option value="Jalisco">Jalisco</option>
-                                <option value="México">México</option>
-                                <option value="Michoacán de Ocampo">
-                                    Michoacán de Ocampo
-                                </option>
-                                <option value="Morelos">Morelos</option>
-                                <option value="Nayarit">Nayarit</option>
-                                <option value="Nuevo León">Nuevo León</option>
-                                <option value="Oaxaca">Oaxaca</option>
-                                <option value="Puebla">Puebla</option>
-                                <option value="Querétaro">Querétaro</option>
-                                <option value="Quintana Roo">Quintana Roo</option>
-                                <option value="San Luis Potosí">San Luis Potosí</option>
-                                <option value="Sinaloa">Sinaloa</option>
-                                <option value="Sonora">Sonora</option>
-                                <option value="Tabasco">Tabasco</option>
-                                <option value="Tamaulipas">Tamaulipas</option>
-                                <option value="Tlaxcala">Tlaxcala</option>
-                                <option value="Veracruz">Veracruz</option>
-                                <option value="Yucatán">Yucatán</option>
-                                <option value="Zacatecas">Zacatecas</option>
-                            </select>
-                        </div>
-                        <div class="col-md-6 mb-3">
-                            <label for="telefonoCelular" class="form-label label-text">Teléfono / Celular</label>
-                            <input type="tel" class="form-control input-text-color" id="telefonoCelular"
-                                formControlName="telefonoCelular" placeholder="Ingresa tu teléfono o celular" required>
-                        </div>
-                    </div>
-
-                    <hr class="green-line">
-
-                    <div class="row align-items-center mt-3">
-                        <div class="col-md-6 mb-3 mb-md-0">
-                            <div class="form-check">
-                                <input class="form-check-input" type="checkbox" id="aceptoTerminos"
-                                    formControlName="aceptoTerminos" required>
-                            <label class="form-check-label input-text-color " for="aceptoTerminos">Acepto
-                            <a class=" input-text-color" target="_blank" href="#" data-bs-toggle="modal" data-bs-target="#termsModal">Bases</a>
-                            y <a class=" input-text-color" target="_blank" href="#" data-bs-toggle="modal" data-bs-target="#privacyModal">Aviso de Privacidad</a><br /><span class="text-danger">
-                            Este campo es requerido.
-                            </span></label>
-                            </div>
-                        </div>
-                        <div class="col-md-6 text-end">
-                            <button type="submit" class="btn btn-danger submit-btn" [disabled]="!registrationForm.valid">Registar</button>
-                        </div>
-                    </div>
-                </form>
- 
+          <div class="row align-items-center mt-3">
+            <div class="col-md-6 mb-3 mb-md-0">
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" id="terms" formControlName="terms"
+                  required>
+                <label class="form-check-label input-text-color">Acepto
+                  <a class=" input-text-color" target="_blank" href="#" data-bs-toggle="modal"
+                    data-bs-target="#termsModal">Bases</a>
+                  y <a class=" input-text-color" target="_blank" href="#" data-bs-toggle="modal"
+                    data-bs-target="#privacyModal">Aviso de Privacidad</a><br /><span class="text-danger">
+                    Este campo es requerido.
+                  </span></label>
+              </div>
+            </div>
+            <div class="col-md-6 text-end">
+              <button type="submit" class="btn btn-danger submit-btn" [disabled]="!registrationForm.valid"
+                [routerLink]="['/cuenta']">Registar</button>
+            </div>
+          </div>
+        </form>
 
 
-<form *ngIf="!isRegisterFormVisible" [formGroup]="loginForm" (ngSubmit)="onLogin()">
-       
- <h2 class="text-start mb-4">Iniciar Sesión</h2>
-        <div class="mb-3">
-          <label for="emailLogin" class="form-label">Correo electrónico</label>
-          <input type="email" id="emailLogin" class="form-control" formControlName="email" required>
-        </div>
-        <div class="mb-3">
-          <label for="passwordLogin" class="form-label">Contraseña</label>
-          <input type="password" id="passwordLogin" class="form-control" formControlName="password" required>
-        </div>
-        <div class="text-start">
-          <button type="submit" class="btn btn-primary" [disabled]="!loginForm.valid">INGRESAR</button>
-        </div>
-      </form>
-</div>
-</div>
-</div>
+
+        <form *ngIf="!isRegisterFormVisible" [formGroup]="loginForm" (ngSubmit)="onLogin()">
+
+          <h2 class="text-start mb-4">Iniciar Sesión</h2>
+          <div class="mb-3">
+            <label for="emailLogin" class="form-label">Correo electrónico</label>
+            <input type="email" id="emailLogin" class="form-control" formControlName="email" required>
+          </div>
+          <div class="mb-3">
+            <label for="passwordLogin" class="form-label">Contraseña</label>
+            <input type="password" id="passwordLogin" class="form-control" formControlName="password" required>
+          </div>
+          <div class="text-start">
+            <button type="submit" class="btn btn-primary" [disabled]="!loginForm.valid"
+              [routerLink]="['/cuenta']">INGRESAR</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
 
 
 
@@ -145,8 +149,7 @@
 
 
 
-
-<!--
+  <!--
 <div class="row">
   <h1>Participa</h1>
   <div class="col-md-2"></div>
