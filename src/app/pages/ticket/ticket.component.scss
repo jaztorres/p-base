@@ -1,0 +1,7 @@
+.text-danger { color: #dc3545 !important; }
+.border-success { border-color: #28a745 !important; }
+.card-body { border: 1px solid #28a745; border-radius: 0.25rem; } /* Delimita card con verde */
+@media (max-width: 768px) {
+  .row > div { text-align: center !important; } /* Ajustes mobile */
+  .text-end { text-align: center !important; }
+}

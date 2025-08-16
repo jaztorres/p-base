@@ -1,16 +1,21 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { FormsModule, ReactiveFormsModule, FormBuilder, Validators } from '@angular/forms';
+import {
+  FormsModule,
+  ReactiveFormsModule,
+  FormBuilder,
+  Validators,
+} from '@angular/forms';
 import { BootstrapModal } from 'bootstrap'; // Para modal, importa si usas JS
 
 @Component({
-  selector: 'app-ticket-registration',
+  selector: 'app-ticket',
   standalone: true,
-  imports: [CommonModule, FormsModule, ReactiveFormsModule],
+  imports: [CommonModule, FormsModule, ReactiveFormsModule,],
   templateUrl: './ticket.component.html',
-  styles: './ticket.component.css'
+  styles: '',
 })
-export class TicketRegistrationComponent {
+export class TicketComponent {
   currentView: string = 'create'; // Inicial: 'create', 'login', 'ticket', 'list'
   headerLeft: string = 'Crear una cuenta';
   headerRight: string = 'Iniciar sesión';
@@ -25,19 +30,19 @@ export class TicketRegistrationComponent {
     address: ['', Validators.required],
     state: ['', Validators.required],
     phone: ['', Validators.required],
-    accept: [false, Validators.requiredTrue]
+    accept: [false, Validators.requiredTrue],
   });
 
   loginForm = this.fb.group({
     email: ['', [Validators.required, Validators.email]],
-    password: ['', Validators.required]
+    password: ['', Validators.required],
   });
 
   ticketForm = this.fb.group({
     store: ['', Validators.required],
     date: ['', Validators.required],
     ticketNo: ['', Validators.required],
-    file: [null]
+    file: [null],
   });
 
   constructor(private fb: FormBuilder) {
@@ -60,11 +65,14 @@ export class TicketRegistrationComponent {
   onCreateAccount() {
     if (this.createForm.valid) {
       // Simula creación: guarda en localStorage
-      localStorage.setItem('user', JSON.stringify({
-        name: this.createForm.value.fullName,
-        email: this.createForm.value.email,
-        // No guardar password en prod!
-      }));
+      localStorage.setItem(
+        'user',
+        JSON.stringify({
+          name: this.createForm.value.fullName,
+          email: this.createForm.value.email,
+          // No guardar password en prod!
+        })
+      );
       this.userName = this.createForm.value.fullName || '';
       this.currentView = 'ticket';
     }
@@ -114,7 +122,9 @@ export class TicketRegistrationComponent {
   }
 
   registerAnother() {
-    const modal = BootstrapModal.getInstance(document.getElementById('thanksModal')!);
+    const modal = BootstrapModal.getInstance(
+      document.getElementById('thanksModal')!
+    );
     modal?.hide();
     this.currentView = 'ticket';
   }
