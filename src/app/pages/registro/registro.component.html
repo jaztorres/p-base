@@ -3,6 +3,10 @@
 <div class="background-container">
   <div class="form-wrapper">
     <div class="row header-row">
+
+
+
+<!--Crear Cuenta-->
       <div class="col-6">
         <h2 class="h2-form"><a (click)="showForm('register')">Crear una cuenta</a></h2>
       </div>
@@ -10,6 +14,19 @@
         <a (click)="showForm('login')" class="login-link">Iniciar sesión</a>
       </div>
     </div>
+
+<!--Iniciar Sesión
+<div class="col-6">
+        <h2 class="h2-form"><a (click)="showForm('register')">Iniciar Sesión</a></h2>
+      </div>
+      <div class="col-6 text-start">
+        <a (click)="showForm('login')" class="login-link">Crear una cuenta</a>
+      </div>
+    </div>-->
+
+
+
+
 
     <div class="card transparent-card">
       <div class="card-body">
@@ -114,16 +131,14 @@
             </div>
             <div class="col-md-6 text-end">
               <button type="submit" class="btn btn-danger submit-btn" [disabled]="!registrationForm.valid"
-                [routerLink]="['/cuenta']">Registar</button>
+              >Registar</button>
             </div>
           </div>
         </form>
 
 
-
+       
         <form *ngIf="!isRegisterFormVisible" [formGroup]="loginForm" (ngSubmit)="onLogin()">
-
-          <h2 class="text-start mb-4">Iniciar Sesión</h2>
           <div class="mb-3">
             <label for="emailLogin" class="form-label">Correo electrónico</label>
             <input type="email" id="emailLogin" class="form-control" formControlName="email" required>

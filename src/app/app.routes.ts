@@ -1,7 +1,8 @@
-import { Routes } from '@angular/router';
+import { provideRouter, RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './pages/home/home.component';
 import { RegistroComponent } from './pages/registro/registro.component';
 import { CuentaComponent } from './pages/cuenta/cuenta.component';
+import { NgModel } from '@angular/forms';
 
 export const routes: Routes = [
   { path: 'home', component: HomeComponent },
@@ -11,3 +12,5 @@ export const routes: Routes = [
   { path: '**', redirectTo: 'home', pathMatch: 'full' },
 
 ];
+
+
